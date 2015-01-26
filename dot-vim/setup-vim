@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Absolute path to this script, e.g. /home/user/bin/foo.sh
+SCRIPT=$(readlink -f "$0")
+# Absolute path this script is in, thus /home/user/bin
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+
+echo "Setting up vim"
+
+if [ -L $HOME/.vimrc ]
+  then
+    echo "removing symbolic link ~/.vimrc"
+    rm $HOME/.vimrc
+fi
+
+if [ -L $HOME/.vim ]
+  then
+    echo "removing symbolic link ~/.vim"
+    rm $HOME/.vim
+fi
+
+if [ -x $HOME/.vimrc ]
+  then
+    echo "moving ~/.vimrc to ~/.vimrc_bak"
+    mv $HOME/.vimrc{,_bak}
+fi
+
+if [ -d $HOME/.vim ]
+  then
+    echo "moving folder ~/.vim to ~/.vim_bak"
+    mv $HOME/.vim{,_bak}
+fi
+
+echo "linking new .vimrc"
+ln -s $SCRIPTPATH/vimrc ~/.vimrc
+
+echo "linking new .vim"
+ln -s $SCRIPTPATH/vim ~/.vim
+
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
