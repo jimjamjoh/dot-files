@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for setup in $(ls */setup*);
+do
+  if [ -x $setup ]
+  then
+    sh ./$setup
+  fi
+done
+
+
+
