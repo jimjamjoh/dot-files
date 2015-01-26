@@ -1,0 +1,48 @@
+#!/bin/bash
+
+Reset='\e[0m'       # Text Reset
+# Regular Colors
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+link () {
+
+  if [ -L $1 ]
+  then
+    info "removing old $1"
+    rm $1
+  fi
+
+  if [ -w $1 ] || [ -d $1 ];
+  then
+    info "moving $1 to $1_bak"
+    mv $1{,_bak}
+  fi
+
+  printf "  [%bLink%b] $1 -> $2\n" $Cyan $Reset
+  ln -s $2 $1
+}
+
+heading () {
+  printf "$Purple ===============$Reset $1 $Purple===============$Reset\n"
+}
+
+info () {
+  printf "  [$Blue .. $Reset] $1\n"
+}
+
+question () {
+  printf "\r  [$Yellow ?? $Reset]$1 "
+}
+
+success () {
+  printf "\r\033[2K  [$Green OK $Reset] $1\n"
+}
+
+

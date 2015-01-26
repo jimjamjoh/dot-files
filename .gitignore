@@ -1,6 +1,3 @@
 *.swp
+~.vim
 
-
-dot-vim/vim/undo/
-dot-vim/vim/bundle/
-dot-vim/vim/.netrwhist
