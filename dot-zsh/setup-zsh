@@ -1,0 +1,12 @@
+#!/bin/bash
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+source $SCRIPTPATH/../helpers
+
+heading "Setting up zsh with prezto"
+
+if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then
+  info "Cloning prezto repository"
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+fi
