@@ -12,6 +12,7 @@ question ' Default git author email:'
 read -e git_authoremail
 
 sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" $SCRIPTPATH/gitconfig.template > $SCRIPTPATH/gitconfig
+
 link $HOME/.gitconfig $SCRIPTPATH/gitconfig
 
 success "git"
