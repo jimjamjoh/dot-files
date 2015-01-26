@@ -13,20 +13,20 @@ White='\e[0;37m'        # White
 
 link () {
 
-  if [ -L $1 ]
+  if [ -L $2 ]
   then
-    info "removing old $1"
-    rm $1
+    info "removing old $2"
+    rm $2
   fi
 
-  if [ -w $1 ] || [ -d $1 ];
+  if [ -w $2 ] || [ -d $2 ];
   then
-    info "moving $1 to $1_bak"
-    mv $1{,_bak}
+    info "moving $2 to $2_bak"
+    mv $2{,_bak}
   fi
 
   printf "  [%bLink%b] $1 -> $2\n" $Cyan $Reset
-  ln -s $2 $1
+  ln -s $1 $2
 }
 
 heading () {
@@ -44,5 +44,3 @@ question () {
 success () {
   printf "\r\033[2K  [$Green OK $Reset] $1\n"
 }
-
-

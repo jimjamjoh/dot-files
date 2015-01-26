@@ -1,15 +1,18 @@
 #!/bin/bash
-SCRIPT=$(readlink -f "$0")
-SCRIPTPATH=$(dirname "$SCRIPT")
+CURRENT_DIR=`pwd`
+cd `dirname $0`
+SCRIPT_PATH=`pwd -P`
 
-source $SCRIPTPATH/../helpers
+source $SCRIPT_PATH/../helpers
 
 heading "Setting up vim"
 
-link ~/.vimrc $SCRIPTPATH/vimrc
-link ~.vim $SCRIPTPATH/vim
+link $SCRIPT_PATH/vimrc $HOME/.vimrc
+link $SCRIPT_PATH/vim $HOME/.vim
 
 info "Setting Up NeoBundle"
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
 success "Vim setup"
+
+cd $CURRENT_DIR

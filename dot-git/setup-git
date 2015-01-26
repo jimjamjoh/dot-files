@@ -1,8 +1,9 @@
 #!/bin/bash
-SCRIPT=$(readlink -f "$0")
-SCRIPTPATH=$(dirname "$SCRIPT")
+CURRENT_DIR=`pwd`
+cd `dirname $0`
+SCRIPT_PATH=`pwd -P`
 
-source $SCRIPTPATH/../helpers
+source $SCRIPT_PATH/../helpers
 
 heading "Setting up git"
 
@@ -11,8 +12,10 @@ read -e git_authorname
 question ' Default git author email:'
 read -e git_authoremail
 
-sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" $SCRIPTPATH/gitconfig.template > $SCRIPTPATH/gitconfig
+sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" $SCRIPT_PATH/gitconfig.template > $SCRIPT_PATH/gitconfig
 
-link $HOME/.gitconfig $SCRIPTPATH/gitconfig
+link $SCRIPT_PATH/gitconfig $HOME/.gitconfig 
 
 success "git"
+
+cd $CURRENT_DIR

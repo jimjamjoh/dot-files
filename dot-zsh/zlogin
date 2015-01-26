@@ -14,21 +14,23 @@
   fi
 } &!
 
+autoload -U colors && colors
 
-message="You are on $HOST"
-message_len=$
-print " ${$(printf "%${#HOST}s" "")// /_}__"
-printf "( $HOST )"
-printf '%*s' "$len" | tr ' ' "-"
+local message="You are on"
+(( len = ${#message} + ${#HOST} ))
 
-$Dino="        o
 
-         o __
-          (_ \
-            \\ \\-^^^-.
-             \\       \\__
-              |_|-|_|.__)"
+print "$fg[blue] ${$(printf "%${len}s" "")// /_}___$reset_color"
+print "$fg[blue]($reset_color $message $fg[yellow]$HOST $fg[blue])$reset_color"
+print "$fg[blue] ${$(printf "%${len}s" "")// /-}---$reset_color"
 
-print $Dino
+local dino="$fg[blue]        o
+         o$fg[green] __
+          (_ \\\\
+            \\\\ \\\\-^^^-.
+             \\\\       \\\\__
+              |_|-|_|.__)$reset_color"
+
+print $dino
 
 
