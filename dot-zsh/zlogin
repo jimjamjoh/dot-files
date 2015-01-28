@@ -29,7 +29,7 @@ local dino="$fg[blue]        o
           (_ \\\\
             \\\\ \\\\-^^^-.
              \\\\       \\\\__
-              |_|-|_|.__)$reset_color"
+              |_|-|_|.__\`>$reset_color"
 
 print $dino
 
