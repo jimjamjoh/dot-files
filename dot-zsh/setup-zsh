@@ -14,7 +14,7 @@ fi
 
 link $SCRIPT_PATH/zlogin $HOME/.zlogin
 link $SCRIPT_PATH/zlogout $HOME/.zlogout
-link $SCRIPT_PATH/zprestorc $HOME/.zprestorc
+link $SCRIPT_PATH/zpreztorc $HOME/.zpreztorc
 link $SCRIPT_PATH/zprofile $HOME/.zprofile
 link $SCRIPT_PATH/zshenv $HOME/.zshenv
 link $SCRIPT_PATH/zshrc $HOME/.zshrc
