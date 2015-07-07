@@ -5,6 +5,11 @@ for setup in $(ls */setup*);
 do
   if [ -x $setup ]
   then
-    sh ./$setup
+    question "Install module - ${setup}? (Y)"
+    read -e install
+    if [ 'Y' == "$install" ] || [ 'y' == "$install" ] || [ '' == "$install" ]
+    then
+      sh ./$setup
+    fi
   fi
 done
