@@ -17,10 +17,12 @@ NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascr
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'elzr/vim-json'
-NeoBundle 'einars/js-beautify'
-NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'amedw/vim-solarized-patched'
+NeoBundle 'bling/vim-airline'
+
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
+
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'tfnico/vim-gradle'
 
@@ -28,7 +30,9 @@ NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'guns/vim-clojure-highlight'
 NeoBundle 'tpope/vim-fireplace'
 
-NeoBundle 'amdt/vim-niji'
+NeoBundle 'einars/js-beautify'
+NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'KabbAmine/gulp-vim'
 
 NeoBundle 'Shougo/unite.vim'
 

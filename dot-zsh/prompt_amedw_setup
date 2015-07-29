@@ -25,7 +25,7 @@
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
 
-CURRENT_BG='NONE'
+CURRENT_BG=''
 PRIMARY_FG=black
 
 DIR_COLOUR=blue
@@ -36,10 +36,10 @@ GIT_UNTRACKED_COLOUR=red
 DEFAULT_USER="aaron"
 
 # Characters
-SEGMENT_SEPARATOR=">"
-PLUSMINUS="±"
-BRANCH="⭠"
-DETACHED="➦"
+SEGMENT_SEPARATOR="\ue0b0"
+PLUSMINUS="\u00b1"
+BRANCH="\ue0a0"
+DETACHED="\u27a6"
 TICK="✔"
 CROSS="(╯°□°)╯︵ ┻━┻"
 LIGHTNING="⚡"
