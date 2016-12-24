@@ -20,5 +20,6 @@ link $SCRIPT_PATH/zshenv $HOME/.zshenv
 link $SCRIPT_PATH/zshrc $HOME/.zshrc
 
 link $SCRIPT_PATH/prompt_amedw_setup ~/.zprezto/modules/prompt/functions/prompt_amedw_setup
+touch $HOME/zshrc-custom
 
 cd $CURRENT_DIR
