@@ -2,8 +2,9 @@
   name = AUTHORNAME
   email = AUTHOREMAIL
 [alias]
-  lg = "log --graph --pretty=format:'%Cgreen%h%Creset -%Creset %s%C(yellow)%d %Cblue(%aN, %cr)%Creset' --abbrev-commit --date=relative"
-  heir = "log --all --graph --decorate --oneline --simplify-by-decoration"
+  heir = log --all --graph --decorate --oneline --simplify-by-decoration --date=relative --abbrev-commit --pretty=format:'%Cgreen%h%Creset -%Creset %s%C(yellow)%d %Cblue(%aN, %cr)%Creset'
+  tree = log --all --graph --pretty=format:'%Cgreen%h%Creset -%Creset %s%C(yellow)%d %Cblue(%aN, %cr)%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cgreen%h%Creset -%Creset %s%C(yellow)%d %Cblue(%aN, %cr)%Creset' --abbrev-commit --date=relative
 [color]
   diff = auto
   status = auto
