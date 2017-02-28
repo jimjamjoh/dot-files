@@ -15,6 +15,7 @@ set expandtab
 set tabstop=2
 set sw=2 "shift width
 set softtabstop=2
+
 " Show matching brackets when text indicator is over them
 set showmatch
 

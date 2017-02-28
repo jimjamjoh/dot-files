@@ -16,7 +16,11 @@ bindkey '^R' history-incremental-search-backward
 
 export JAVA_HOME="/usr/java/latest"
 export GRADLE_HOME="/usr/gradle/gradle-2.5"
-export PATH="$PATH:$JAVA_HOME/bin:$GRADLE_HOME/bin"
+export PATH="$PATH:$JAVA_HOME/bin:$GRADLE_HOME/bin:/Users/aaron/.npm-packages/bin/firebase"
 
 source "$HOME/.zshrc-custom"
+source "$HOME/.bashrc"
 
+
+# added by travis gem
+[ -f /Users/aaron/.travis/travis.sh ] && source /Users/aaron/.travis/travis.sh

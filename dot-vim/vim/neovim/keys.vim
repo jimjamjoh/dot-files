@@ -1,5 +1,5 @@
 
-" resource settings 
+" resource settings
 nnoremap <leader>ss :source ~/.config/nvim/init.vim<cr>
 
 " NERDTree bindings
@@ -22,3 +22,5 @@ nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR><C-o>
 nnoremap <leader><cr> :tabe<cr>
 nnoremap <leader>[ :tabp<cr>
 nnoremap <leader>] :tabn<cr>
+
+nnoremap <leader><space> :noh<cr>
