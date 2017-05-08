@@ -4,39 +4,14 @@ cd `dirname $0`
 SCRIPT_PATH=`pwd -P`
 
 source $SCRIPT_PATH/../helpers
+heading "Setting up vim"
 
-question "Do you want to use NeoVim? (Y)"
-read -e nvim
+link $SCRIPT_PATH/vimrc $HOME/.vimrc
+link $SCRIPT_PATH/vim $HOME/.vim
 
-if [ 'Y' == "$nvim" ] || [ 'y' == "$nvim" ] || [ '' == "$nvim" ]
-then
-  heading "Setting up NeoVim"
-  info "Setting up vim-plug"
-
-  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-  nvim_config=$HOME/.config/nvim
-
-  mkdir -p $nvim_config/config
-
-  link $SCRIPT_PATH/vim/neovim/init.vim $nvim_config/init.vim
-
-  link $SCRIPT_PATH/vim/neovim/general.vim $nvim_config/config/general.vim
-  link $SCRIPT_PATH/vim/neovim/keys.vim $nvim_config/config/keys.vim
-  link $SCRIPT_PATH/vim/neovim/plugins.vim $nvim_config/config/plugins.vim
-
-  touch $nvim_config/config/custom.vim
-else
-  # This is more for legacy
-  heading "Setting up vim"
-
-  link $SCRIPT_PATH/vimrc $HOME/.vimrc
-  link $SCRIPT_PATH/vim $HOME/.vim
-
-  info "Setting Up NeoBundle"
-  curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-fi
-
+info "Setting Up Plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 success "Vim setup"
 

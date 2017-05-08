@@ -1,46 +1,29 @@
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+call plug#begin('~/.vim/plugged')
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'amedw/vim-solarized-patched'
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'amedw/vim-solarized-patched'
-NeoBundle 'bling/vim-airline'
+Plug 'maralla/completor.vim'
 
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
 
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'tfnico/vim-gradle'
+Plug 'janko-m/vim-test'
+Plug 'skywind3000/asyncrun.vim'
 
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'guns/vim-clojure-highlight'
-NeoBundle 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
 
-NeoBundle 'einars/js-beautify'
-NeoBundle 'maksimr/vim-jsbeautify'
-NeoBundle 'KabbAmine/gulp-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-NeoBundle 'Shougo/unite.vim'
+Plug 'w0rp/ale'
 
-call neobundle#end()
+call plug#end()
 
-" Required:
-filetype plugin indent on
+source $HOME/.vim/general.vim
+source $HOME/.vim/keys.vim
+source $HOME/.vim/plugins.vim
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+
