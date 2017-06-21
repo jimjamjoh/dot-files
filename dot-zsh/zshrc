@@ -21,6 +21,9 @@ export PATH="$PATH:$JAVA_HOME/bin:$GRADLE_HOME/bin:/Users/aaron/.npm-packages/bi
 source "$HOME/.zshrc-custom"
 source "$HOME/.bashrc"
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 
 # added by travis gem
 [ -f /Users/aaron/.travis/travis.sh ] && source /Users/aaron/.travis/travis.sh

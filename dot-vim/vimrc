@@ -6,7 +6,7 @@ Plug 'amedw/vim-solarized-patched'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'maralla/completor.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 Plug 'scrooloose/nerdcommenter'
 
@@ -19,6 +19,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'w0rp/ale'
+
+Plug 'mxw/vim-jsx'
+
+Plug 'jalvesaq/Nvim-R'
+Plug 'chrisbra/csv.vim'
+
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 

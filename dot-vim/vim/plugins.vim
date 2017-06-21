@@ -4,3 +4,10 @@ let test#strategy = "asyncrun"
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 
 let g:fzf_layout = { 'down': '~40%' }
+
+let vim_markdown_preview_github=1
+
+
+
+
+let g:completor_node_binary = '/usr/local/bin/node'
