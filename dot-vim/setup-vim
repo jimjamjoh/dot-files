@@ -6,8 +6,10 @@ SCRIPT_PATH=`pwd -P`
 source $SCRIPT_PATH/../helpers
 heading "Setting up vim"
 
+info "Linking vim files"
 link $SCRIPT_PATH/vimrc $HOME/.vimrc
-link $SCRIPT_PATH/vim $HOME/.vim
+mkdir -p $HOME/.vim/
+link $SCRIPT_PATH/config/ $HOME/.vim/
 
 info "Setting Up Plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

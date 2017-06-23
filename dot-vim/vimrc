@@ -1,36 +1,34 @@
 call plug#begin('~/.vim/plugged')
-
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'amedw/vim-solarized-patched'
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-
-Plug 'scrooloose/nerdcommenter'
-
-Plug 'janko-m/vim-test'
-Plug 'skywind3000/asyncrun.vim'
-
-Plug 'tpope/vim-fugitive'
+" Themes & Styles
+Plug 'aaron-edwards/vim-solarized-patched'
+Plug 'sonph/onehalf' "For Fallback
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Navigation
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+
+" Autocomplete & Sytax
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --omnisharp-completer --tern-completer' }
 Plug 'w0rp/ale'
 
+" Helpers
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'sjl/gundo.vim'
+
+" Language
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-Plug 'jalvesaq/Nvim-R'
-Plug 'chrisbra/csv.vim'
-
-Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
-source $HOME/.vim/general.vim
-source $HOME/.vim/keys.vim
-source $HOME/.vim/plugins.vim
-
+source $HOME/.vim/config/general.vim
+source $HOME/.vim/config/keys.vim
+source $HOME/.vim/config/plugins.vim
 
