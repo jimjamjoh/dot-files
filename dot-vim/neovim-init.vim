@@ -1,13 +1,12 @@
 call plug#begin('~/.vim/plugged')
-" Themes & Styles
-Plug 'aaron-edwards/vim-solarized-patched'
-Plug 'sonph/onehalf' "For Fallback
 
+Plug 'lifepillar/vim-solarized8'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Navigation
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin',  { 'on':  'NERDTreeToggle' } 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
@@ -15,6 +14,7 @@ Plug 'mileszs/ack.vim'
 " Autocomplete & Sytax
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --omnisharp-completer --tern-completer' }
 Plug 'w0rp/ale'
+Plug 'luochen1990/rainbow'
 "Plug 'ternjs/tern_for_vim'
 
 " Helpers
@@ -28,17 +28,16 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'chrisbra/csv.vim'
 Plug 'fleischie/vim-styled-components'
+Plug 'udalov/kotlin-vim'
+Plug 'keith/swift.vim'
 
-" Snippits
-"Plug 'SirVer/ultisnips'
-"Plug 'epilande/vim-react-snippets' 
-"Plug 'epilande/vim-es2015-snippets' 
-
-
+" CTags
+"Plug 'jsfaint/gen_tags.vim'
 
 call plug#end()
 
-source $HOME/.vim/config/general.vim
-source $HOME/.vim/config/keys.vim
-source $HOME/.vim/config/plugins.vim
+source ~/.config/nvim/config/general.vim
+source ~/.config/nvim/config/keys.vim
+source ~/.config/nvim/config/plugins.vim
+source ~/.config/nvim/config/custom.vim
 

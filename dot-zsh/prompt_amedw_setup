@@ -42,6 +42,7 @@ BRANCH="\ue0a0"
 DETACHED="\u27a6"
 TICK="✔"
 CROSS="(╯°□°)╯︵ ┻━┻"
+BACK="┬─┬ノ(ಠ_ಠノ)"
 LIGHTNING="⚡"
 GEAR="⚙"
 
@@ -140,6 +141,7 @@ prompt_status() {
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}$GEAR"
 
   [[ -n "$symbols" ]] && prompt_segment $PRIMARY_FG default " $symbols "
+  export lastRef=$RETVAL
 }
 
 ## Main prompt
