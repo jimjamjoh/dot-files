@@ -75,3 +75,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
+export N_PREFIX=$HOME
+
+export PATH="$HOME/.cargo/bin:$PATH"

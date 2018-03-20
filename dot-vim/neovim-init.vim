@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'lifepillar/vim-solarized8'
+Plug 'icymind/NeoSolarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -20,6 +21,7 @@ Plug 'luochen1990/rainbow'
 " Helpers
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'sjl/gundo.vim'
 Plug 'chrisbra/Colorizer'
 
@@ -30,7 +32,13 @@ Plug 'chrisbra/csv.vim'
 Plug 'fleischie/vim-styled-components'
 Plug 'udalov/kotlin-vim'
 Plug 'keith/swift.vim'
+Plug 'vim-scripts/Kerbal-Space-Program-Syntax' " KSP Saves
+Plug 'KSP-KOS/EditorTools', { 'branch': 'develop', 'rtp': 'VIM/vim-kerboscript' } " KerbolScript
+Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 
+Plug 'neilagabriel/vim-geeknote'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " CTags
 "Plug 'jsfaint/gen_tags.vim'
 
