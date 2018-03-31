@@ -13,10 +13,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
 " Autocomplete & Sytax
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --omnisharp-completer --tern-completer' }
 Plug 'w0rp/ale'
 Plug 'luochen1990/rainbow'
 "Plug 'ternjs/tern_for_vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " Helpers
 Plug 'scrooloose/nerdcommenter'
@@ -37,7 +43,6 @@ Plug 'KSP-KOS/EditorTools', { 'branch': 'develop', 'rtp': 'VIM/vim-kerboscript' 
 Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
 
-Plug 'neilagabriel/vim-geeknote'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " CTags
 "Plug 'jsfaint/gen_tags.vim'
